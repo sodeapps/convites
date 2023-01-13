@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @confirmar.nome %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @confirmar.telefone %>
+</p>
+
+<p>
+  <strong>Idade:</strong>
+  <%= @confirmar.idade %>
+</p>
+
+<%= link_to 'Edit', edit_confirmar_path(@confirmar) %> |
+<%= link_to 'Back', root_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Confirmars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Telefone</th>
+      <th>Idade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @confirmars.each do |confirmar| %>
+      <tr>
+        <td><%= confirmar.nome %></td>
+        <td><%= confirmar.telefone %></td>
+        <td><%= confirmar.idade %></td>
+        <td><%= link_to 'Show', confirmar %></td>
+        <td><%= link_to 'Edit', edit_confirmar_path(confirmar) %></td>
+        <td><%= link_to 'Destroy', confirmar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Confirmar', new_confirmar_path %>
